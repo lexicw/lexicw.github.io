@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Alexandra Wheeler's Portfolio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Homemade+Apple">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script src="https://kit.fontawesome.com/44bd8ef6fb.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="styles.css">  
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-light navbar-light">
+  <a class="navbar-brand" href="index.html">AW</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#myModal" data-toggle="modal" data-target="#myModal">About</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="#skills">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#projects">Projects</a>
+      </li>
+	    <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact Me</a>
+      </li>
+	  </ul>
+	    	  <ul class="navbar-nav ml-auto">
+	       <li class="list-inline-item">
+		  <a class="btn btn-social-icon btn-file-pdf-o" href="alexandra_wheeler_resume.pdf">
+			<span class="fa fa-file-pdf-o"></span>
+			</a>
+		  <a class="btn btn-social-icon btn-github" href="https://github.com/lexicw15/">
+			<span class="fa fa-github"></span>
+		  </a>
+		   <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/alexandra-wheeler-883235169">
+			<span class="fa fa-linkedin"></span>
+			</a>
+		  </li>
+		 </ul>
+    
+  </div>  
+</nav>
+<header>
+<div class="card text-center cardbg" style="width:100%">
+   <img class="img-fluid fadeimg"  src="img/computer.jpg" alt="Computer" style="opacity: 0.5;">
+
+  <div class="card-img-overlay d-flex">
+  <div class="my-auto mx-auto text-center">
+  <section class='hero-header-text'>
+    <h1 class="card-title">Alexandra Wheeler</h1>
+    <p class="card-text">Web/Software Developer</p>
+    <a href="#" class="btn btn-outline-light" data-toggle="modal" data-target="#myModal">Learn More</a>
+	</div>
+ </section>
+</header>	
+	<div class="modal" id="myModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+	  About Me
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+	  <img class="img-fluid rounded-circle" src="img/lexi_portfolio.jpg" style="  display: block; margin-left: auto; margin-right: auto; width: 50%;" alt="Alexandra Wheeler">
+	<p>Hello, World! My name is Alexandra Wheeler. I have been interested in Web Development since I was a kid, when I taught myself HTML and CSS in my spare time. After doing Order Entry for 6 years, I decided to go back to school full-time for Software Development. I graduated with an Associate of Science in Software Development at Ivy Tech Community College, and then later transferred that degree to Western Governors University, where I got a Bachelor of Science in Software Development.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+<div class="container rcorners mt-3">
+<br>
+  <h3 id="skills">Skills</h3>
+  <p>Here are some of the languages and technologies that I have experience with.</p>
+  
+  <div class="container text-center">
+  <div class="row row-cols-3 mb-5">
+    <div class="col mb-4"><span class="fa fa-html5" style="font-size:64px;"></span><br>HTML 5</div>
+    <div class="col"><span class="fab fa-css3-alt" style="font-size:64px;"></span><br>CSS3</div>
+    <div class="col"><span class="fab fa-js" style="font-size:64px;"></span><br>Javascript</div>
+    <div class="col"><span class="fab fa-java" style="font-size:64px;"></span><br>Java</div>
+	<div class="col"><span class="fab fa-bootstrap" style="font-size:64px;"></span><br>Bootstrap</div>
+	<div class="col"><span class="fas fa-database" style="font-size:64px;"></span><br>SQL</div>
+  </div>
+</div>
+
+
+</br>
+  <h3 id="projects">Projects</h3>
+  <p>Below are some of my projects. The source code for all of them can be viewed on my Github account.</p>
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseOne">
+          Javascript
+        </a>
+      </div>
+      <div id="collapseOne" class="collapse" data-parent="#accordion">
+        <div class="card-body text-center">
+		
+<div class="dropdown">
+  <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Projects
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="DiceRoll.html" target="jsIframe">Dice Roll</a>
+    <a class="dropdown-item" href="TipCalculator.html" target="jsIframe">Tip Calculator</a>
+    <a class="dropdown-item" href="EgyptianQuiz.html" target="jsIframe">Egyptian Quiz</a>
+  </div>
+</div>
+          
+          <br><iframe name="jsIframe"></iframe></br>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+        Java
+      </a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+		<h4>Scheduling Application</h4>
+		<p>This project was made in Netbeans using Java and SQL. The application can add customers, schedule appointments with those customers, and print reports.</p>
+		<iframe src="https://player.vimeo.com/video/513673961?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Scheduling Application.mp4"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-5">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+          Websites
+        </a>
+      </div>
+      <div id="collapseThree" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+		This section is under construction.
+		</div>
+      </div>
+    </div>
+  </div>
+
+  
+<h3>Contact Me</h3>
+
+<form>
+  <div class="mb-3">
+    <label for="nameInput" class="form-label">Name</label>
+    <input type="name" class="form-control" id="nameInput">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="subject">Your Message</label>
+    <textarea id="subject" class="form-control" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+	</div>
+  <div class="mb-3">	
+  <button type="submit" class="btn btn-dark">Submit</button>
+  </div>
+</form>
+
+
+</div>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2021 Alexandra Wheeler</p>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+		   <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/alexandra-wheeler-883235169">
+			<span class="fa fa-linkedin"></span>
+			</a>
+		  </li>
+          <li class="list-inline-item">
+		  <a class="btn btn-social-icon btn-github" href="https://github.com/lexicw15/">
+			<span class="fa fa-github"></span>
+		  </a>
+		  </li>
+          <li class="list-inline-item">
+		  <a class="btn btn-social-icon btn-file-pdf-o" href="alexandra_wheeler_resume.pdf">
+			<span class="fa fa-file-pdf-o"></span>
+			</a>
+			</li>
+        </ul>
+      </footer>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!-- Author:      Alexandra Wheeler    -->
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Tip Calculator</title>
+  <meta charset="utf-8" />
+  <style>
+  #wrapper {	width:230px;
+			border:none;
+			margin:2.5em auto 10px auto;
+			background-color: white;
+			border: 2px dotted black;
+		} 
+		
+			
+input[type="number"] {
+			width: 70px;
+}
+input[type="text"] {
+			width: 70px;
+}
+#errorMsg {
+		font: 1em Arial; text-align: center;
+		color: red; 
+		}
+		
+h1,h2	{	margin: 0px; }
+
+h1		{ 	font: 2em Arial; text-align: center; }
+h2		{ 	font: 0.9em Arial, Helvetica, sans-serif; }
+label	{ 	font-weight: bold;
+			font: 1.2em Arial; }
+
+footer	{	font-size: 0.7em;}
+
+body {
+	background-color: white;
+}
+
+button {
+  font: 1em Arial;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  border: 2px solid dodgerblue;
+  transition-duration: 0.4s;
+  padding: 5px 12px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+</style>
+	<script src="TipCalculator.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<main>
+<h1>Tip Calculator</h1>
+<p id="errorMsg"></p>
+<form>
+  <label>Cost of meal: $</label>
+  <input type="number" id="cost"><br>
+  <label>Tip Percentage:</label>
+  <select id="percentage">
+  <option value=".10">10%</option>
+  <option value=".15">15%</option>
+  <option value=".20">20%</option>
+  </select>
+  <br>
+  <div class="center">
+  <button onclick="tipCalculate()">Calculate</button><br><br>
+  </div>
+  <label>Tip amount: $</label>
+  <input type="text" id="tipAmount"><br>
+  <label>Total Cost: $</label>
+  <input type="text" id="totalCost"><br><br>
+</form>
+</main>
+</div>
+</body>
+</html>
