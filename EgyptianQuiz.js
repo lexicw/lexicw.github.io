@@ -48,14 +48,14 @@ let questions = [
 		d : "A jellyfish",
         correct : "A"
 	},{
-        question : "6. _____ is the name of a popular strategy board game that was played in Ancient Egypt. It is said to be an ancestor of Backgammon.",
+        question : "6. _____ is the name of a popular strategy board game that was played in Ancient Egypt.",
         a : "Chess",
         b : "Senet",
         c : "Karuta",
 		d : "Tavli",
         correct : "B"
 	},{
-        question : "7. A Pharaoh by the name of ______ was known as a heretic for establishing a monotheistic religion to worship the sun god Aten.",
+        question : "7. A Pharaoh by the name of ______ was known as a heretic for establishing a monotheistic religion.",
         a : "Djoser",
         b : "Narmer",
         c : "Khufu",

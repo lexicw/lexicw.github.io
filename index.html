@@ -120,8 +120,9 @@
         <h5>Dice Roll</h5>
         <p>A small program that will generate a random number from 1-6 and display the number on a dice. The dice image is made with an HTML canvas.
         </p>
+		<p>
 		Languages: HTML, CSS, Javascript
-		<br>
+		</p>
            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#diceModal">
     Open
   </button>
@@ -130,24 +131,30 @@
   </div>
   <div class="col-sm-6" style="text-align:center;">
     <div class="card mb-5">
-		<img src="..." class="card-img-top">
+		<img src="img/tipcalculator.jpg" class="card-img-top">
       <div class="card-body">
 		
         <h5>Tip Calculator</h5>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 </p>
+		<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#TipCalcModal">
+			Open
+		</button>
 		
       </div>
     </div>
   </div>
     <div class="col-sm-6" style="text-align:center;">
     <div class="card mb-5">
-		<img src="..." class="card-img-top">
+		<img src="img/egypt.jpg" class="card-img-top">
       <div class="card-body">
 		
         <h5>Egyptian Quiz</h5>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 </p>
+		<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#EgyptianQuizModal">
+			Open
+		</button>
 		
       </div>
     </div>
@@ -167,6 +174,24 @@
       </div>
     </div>
     </div>
+	
+	        <div class="col-sm-6" style="text-align:center;">
+    <div class="card mb-5">
+		<img src="img/schedule.jpg" class="card-img-top">
+      <div class="card-body">
+		
+        <h5>Scheduling Application</h5>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+		
+		<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#ScheduleModal">
+			Open
+		</button>
+		
+      </div>
+    </div>
+    </div>
+	
+	
 </div>
    
   
@@ -193,6 +218,49 @@
     </div>
   </div>  
   
+    <!-- Tip Calculator Modal -->
+  <div class="modal" id="TipCalcModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Tip Calculator</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         <iframe src="TipCalculator.html" title="description"></iframe>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div> 
+  
+  
+    <!-- Egyptian Quiz Modal -->
+  <div class="modal" id="EgyptianQuizModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Egyptian Quiz</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         <iframe src="EgyptianQuiz.html" title="description"></iframe>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>    
+  
     <!-- To-Do List Modal -->
   <div class="modal" id="ToDoListModal">
     <div class="modal-dialog modal-dialog-centered">
@@ -215,61 +283,27 @@
   </div>  
   
   
-  
-  
-  <div id="accordion">
-    <div class="card">
-      <div class="card-header">
-        <a class="collapsed card-link" data-toggle="collapse" href="#collapseOne">
-          Javascript
-        </a>
-      </div>
-      <div id="collapseOne" class="collapse" data-parent="#accordion">
-        <div class="card-body text-center">
-		
-<div class="dropdown">
-  <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Projects
-  </a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="DiceRoll.html" target="jsIframe">Dice Roll</a>
-    <a class="dropdown-item" href="TipCalculator.html" target="jsIframe">Tip Calculator</a>
-    <a class="dropdown-item" href="EgyptianQuiz.html" target="jsIframe">Egyptian Quiz</a>
-  </div>
-</div>
-          
-          <br><iframe name="jsIframe"></iframe></br>
+      <!-- Scheduling Application Modal -->
+  <div class="modal" id="ScheduleModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Scheduling Application</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-        Java
-      </a>
-      </div>
-      <div id="collapseTwo" class="collapse" data-parent="#accordion">
-        <div class="card-body">
-		<h4>Scheduling Application</h4>
-		<p>This project was made in Netbeans using Java and SQL. The application can add customers, schedule appointments with those customers, and print reports.</p>
-		<iframe src="https://player.vimeo.com/video/513673961?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Scheduling Application.mp4"></iframe>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         <iframe src="https://player.vimeo.com/video/513673961?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Scheduling Application.mp4"></iframe>
         </div>
+        
+        
       </div>
     </div>
-    <div class="card mb-5">
-      <div class="card-header">
-        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-          Websites
-        </a>
-      </div>
-      <div id="collapseThree" class="collapse" data-parent="#accordion">
-        <div class="card-body">
-		This section is under construction.
-		</div>
-      </div>
-    </div>
-  </div>
+  </div>  
+  
 
   
 <h3>Contact Me</h3>
