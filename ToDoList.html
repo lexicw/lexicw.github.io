@@ -1,0 +1,253 @@
+<!-- Author:        Alexandra Wheeler  		 -->
+<!doctype html>
+<html lang="en">
+<head>
+<style>
+.paper {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin: 26px auto 0;
+  max-width: 550px;
+  min-height: 300px;
+  padding: 24px;
+  position: relative;
+  width: 80%;
+}
+.paper:before, .paper:after {
+  content: "";
+  height: 40%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.paper:before {
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-2.5deg);
+}
+
+
+h1			{	
+  font: 2.5em 'Sofia'; 
+	text-align: center; }
+	input[type="text"] {
+	width: 50%;
+}
+
+body			{	
+        font: 0.9em 'Arial';
+				background: linear-gradient(white, lightgray);
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+			}
+
+section		{	clear: both;	}
+
+footer		{	border-top: 2px solid rgb(0,0,0);
+				font-size: 0.8em; 
+				margin-top: 10px;
+			}
+fieldset {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  max-width: 550px;
+  text-align: center;
+  border: 1px solid gray;
+}
+
+legend {
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  border: 1px solid gray;
+}
+
+input {
+  margin: 5px;
+}
+
+a				{	color: rgb(0,0,0); }
+a:hover			{	text-shadow: 1px 1px rgb(102,102,102); }
+a#current		{	border-bottom: 2px solid rgb(204,204,204); }
+.actions		{	display: block;
+					margin-bottom: 5px;
+				}
+ol li			{	font-size: 1.2em; }
+table			{	margin-left: 30px; }				
+th				{	text-align: left;
+					padding-left: 1em;
+				}
+td				{	width: 40%; 
+					font: 1em Consolas,"Courier New",monospace;
+				}
+code				{	font-weight: bold;
+					font-size: 1.1em;
+				}
+nav a			{	margin-right: 15px; }
+.noBullet		{	list-style-type: none; }
+ul.twoCol		{	-moz-column-count: 2; -moz-column-gap: 1em; }
+
+input[type=button] {
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #555555;
+  transition-duration: 0.4s;
+}
+
+
+input[type=button]:hover {
+  background-color: white; 
+  color: black;
+}
+
+input[type=button]:active {
+  border: none;
+  background-color: white; 
+  color: black;
+}
+</style>
+  <form id="arrayForm">
+<fieldset class="left">
+<legend>Enter stuff you need to do: </legend>
+<input type="text" name="itemType" id="itemType" size="10" />
+<input type="button" name="addButton" id="addButton" value="Add" href="#" />
+</fieldset>
+</form>
+  <div class="paper">
+<title>To-Do List</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+</head>
+<body>
+  
+  
+<main id="wrapper">
+<header>
+  <h1>To-Do List</h1>
+</header>
+<article>
+</article>
+<section>
+<p id="output">List items will go here</p>
+  
+</section>
+
+  <input type="button" class="actions" name="removeFirst" id="removeFirst" value="Remove First" />
+<input type="button" class="actions" name="removeLast" id="removeLast" value="Remove Last" />
+<input type="button" class="actions" name="clearList" id="clearList" value="Clear List" />
+  
+<script>
+var items = []; // initializes the array 
+var out = document.getElementById("output");
+
+// Clears anything that was previously in the "output" paragraph, then turns any values in the array into an ordered list
+function displayList() { 
+	 console.log("Entering displayList()...");
+	 out.innerHTML = "";
+	 var ol = document.createElement("ol");
+	 out.appendChild(ol);
+	 for (i = 0; i < items.length; i++) {
+		console.log("item " + i + "  in the array is " + items[i]);
+		var li = document.createElement("li");
+		var textnode = document.createTextNode(items[i]);
+		ol.appendChild(li);
+		li.appendChild(textnode);
+	 	}
+	}
+
+// Function that adds new items to the array
+function addItem() { 
+	console.log("Entering addItem()...");
+	newItem = document.getElementById("itemType").value;
+	items.push(newItem);
+	console.log("newItem = " + newItem);
+	out.innerHTML = "The number of items on your list is " + items.length + "."
+	document.getElementById("itemType").value = '';
+	document.getElementById("itemType").focus();
+	displayList();
+}
+
+// Function that removes first item from the array
+function removeFirst() { 
+	console.log("Entering removeFirst()...");
+	items.shift();
+	displayList();
+}
+
+// Function that removes last item from the array
+function removeLast() { 
+	console.log("Entering removeLast()...");
+	items.pop();
+	displayList();
+}
+
+// Function that clears the list
+function clearList() { 
+	console.log("Entering clearList()...");
+	items = [];
+	displayList();
+}
+
+// Creates the event listeners that will allow the buttons to call their corresponding function upon clicking
+function createEventListeners() { 
+	console.log("Entering createEventListeners()...");
+   var addBtn = document.getElementById("addButton");
+   if (addBtn.addEventListener) {
+      addBtn.addEventListener("click", addItem, false);
+   } else if (addBtn.attachEvent) {
+      addBtn.attachEvent("onclick", addItem);
+   } 
+   var removefirstBtn = document.getElementById("removeFirst");
+   if (removefirstBtn.addEventListener) {
+      removefirstBtn.addEventListener("click", removeFirst, false);
+   } else if (removefirstBtn.attachEvent) {
+      removefirstBtn.attachEvent("onclick", removeFirst);
+   } 
+   var removelastBtn = document.getElementById("removeLast");
+   if (removelastBtn.addEventListener) {
+      removelastBtn.addEventListener("click", removeLast, false);
+   } else if (removelastBtn.attachEvent) {
+      removelastBtn.attachEvent("onclick", removeLast);
+   } 
+
+	var clearListBtn = document.getElementById("clearList");
+   if (clearListBtn.addEventListener) {
+      clearListBtn.addEventListener("click", clearList, false);
+   } else if (clearListBtn.attachEvent) {
+      clearListBtn.attachEvent("onclick", clearList);
+   }
+} 
+  
+
+// Calls event listeners upon loading the page
+if (window.addEventListener) { 
+   window.addEventListener("load", createEventListeners, false);
+} else if (window.attachEvent) {
+   window.attachEvent("onload", createEventListeners);
+}
+</script>
+<footer>
+
+<p>&copy; <span id="year"></span>. Alexandra Wheeler.</p>
+</footer>
+<script>
+    var currentYear = new Date().getFullYear(); 
+	var dateContainer = document.getElementById("year");
+	dateContainer.innerHTML = currentYear;
+</script>
+</main>
+</body>
+</html></p>
+</div>

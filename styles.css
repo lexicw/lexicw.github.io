@@ -35,6 +35,10 @@ iframe {
   min-height: 300px;
 }
 
+.iframeheight {
+	min-height: 600px;
+}
+
 footer {
 	background-color: #f8f9fa;
 }
