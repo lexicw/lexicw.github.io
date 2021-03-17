@@ -1,0 +1,54 @@
+#wrapper {
+  margin: auto;
+  width: 60%;
+  border: 3px solid black;
+  padding: 10px;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
+h4 {
+  text-align: center;
+}
+textarea {
+  margin: auto;
+  display: block;
+}
+#img-canvas {
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.flex-item-left {
+  flex: 50%;
+  border: 1px solid black;
+  flex-grow: 1;
+}
+
+.flex-item-right {
+  flex: 50%;
+  border: 1px solid black;
+  flex-grow: 1;
+
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  #wrapper {
+    width: 95%;
+    border: none;
+  }
+}
