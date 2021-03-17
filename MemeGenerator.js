@@ -60,16 +60,22 @@ console.log("Entering initialize()....");
 
 // Adds Event Listener to "Generate" button, allowing the Meme to be generated
 document.getElementById("generate").addEventListener("click", function() {
-    // Read image as DataURL using the FileReader API
-    let reader = new FileReader();
-    reader.onload = function () {
-        let img = new Image;
-        img.src = reader.result;
-        img.onload = function(){
-        generateMeme(img, topText.value, bottomText.value, topTextSize.value, bottomTextSize.value);
-        };
-    };
-    reader.readAsDataURL(imgInput.files[0]);
+    try {
+      document.getElementById("error-msg").innerHTML = "";
+      // Read image as DataURL using the FileReader API
+      let reader = new FileReader();
+      reader.onload = function () {
+          let img = new Image;
+          img.src = reader.result;
+          img.onload = function(){
+          generateMeme(img, topText.value, bottomText.value, topTextSize.value, bottomTextSize.value);
+          };
+      };
+      reader.readAsDataURL(imgInput.files[0]);
+    }
+    catch(err) {
+      document.getElementById("error-msg").innerHTML = "Please upload an image.";
+    }
 
 });
 
