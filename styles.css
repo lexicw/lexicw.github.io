@@ -23,6 +23,11 @@ body, html {
 	background-color: black;
 }
 
+h1 {
+  font-family: "Homemade Apple", sans-serif;
+  font-size: 60px;
+}
+
 iframe {
   margin: 0 auto;
   display: block;
@@ -93,4 +98,11 @@ header {
 
 .navbar-brand {
   padding-right:50px;
+}
+
+@media only screen and (max-width: 768px) {
+  h1.title {
+  font-family: "Homemade Apple", sans-serif;
+  font-size: 40px;
+  }
 }
