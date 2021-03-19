@@ -26,7 +26,7 @@ function generateMeme (img, topText, bottomText, topTextSize, bottomTextSize) {
 
     // Top text font size
     fontSize = canvas.width * topTextSize;
-    ctx.font = fontSize + 'px Impact';
+    ctx.font = fontSize + 'px Jockey One';
     ctx.fillStyle = document.getElementById("top-color").value;
     ctx.lineWidth = fontSize / 20;
 
@@ -39,7 +39,7 @@ function generateMeme (img, topText, bottomText, topTextSize, bottomTextSize) {
 
     // Bottom text font size
     fontSize = canvas.width * bottomTextSize;
-    ctx.font = fontSize + 'px Impact';
+    ctx.font = fontSize + 'px Jockey One';
     ctx.fillStyle = document.getElementById("bottom-color").value;
     ctx.lineWidth = fontSize / 20;
 
