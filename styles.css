@@ -23,6 +23,10 @@ body, html {
 	background-color: black;
 }
 
+.card-btn {
+	width: 95%;
+}
+
 h1 {
   font-family: "Homemade Apple", sans-serif;
   font-size: 60px;
