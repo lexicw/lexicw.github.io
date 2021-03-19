@@ -48,36 +48,11 @@ function generateMeme (img, topText, bottomText, topTextSize, bottomTextSize) {
 
     // Draw bottom text
     ctx.textBaseline = 'bottom';
-    bottomText.split('\n').reverse().forEach(function (t, i) { // .reverse() because it's drawing the bottom text from the bottom up
+    bottomText.split('\n').reverse().forEach(function (t, i) {
         ctx.fillText(t, canvas.width / 2, canvas.height - i * fontSize, canvas.width);
         ctx.strokeText(t, canvas.width / 2, canvas.height - i * fontSize, canvas.width);
     });
 }
-
-
-function initialize () {
-console.log("Entering initialize()....");
-
-// Adds Event Listener to "Generate" button, allowing the Meme to be generated
-document.getElementById("generate").addEventListener("click", function() {
-    try {
-      document.getElementById("error-msg").innerHTML = "";
-      // Read image as DataURL using the FileReader API
-      let reader = new FileReader();
-      reader.onload = function () {
-          let img = new Image;
-          img.src = reader.result;
-          img.onload = function(){
-          generateMeme(img, topText.value, bottomText.value, topTextSize.value, bottomTextSize.value);
-          };
-      };
-      reader.readAsDataURL(imgInput.files[0]);
-    }
-    catch(err) {
-      document.getElementById("error-msg").innerHTML = "Please upload an image.";
-    }
-
-});
 
 // Adds Event Listener to "Download" button, allowing the user to download the Meme
 document.getElementById("download").addEventListener("click", function() {
@@ -102,6 +77,30 @@ document.getElementById("clear").addEventListener("click", function() {
   document.getElementById("top-text-size").value = 0.15;
   document.getElementById("bottom-text-size").value = 0.15;
   document.getElementById("img-input").value = "";
+
+});
+
+function initialize () {
+console.log("Entering initialize()....");
+
+// Adds Event Listener to "Generate" button, allowing the Meme to be generated
+document.getElementById("generate").addEventListener("click", function() {
+    try {
+      document.getElementById("error-msg").innerHTML = "";
+      // Read image as DataURL using the FileReader API
+      let reader = new FileReader();
+      reader.onload = function () {
+          let img = new Image;
+          img.src = reader.result;
+          img.onload = function(){
+          generateMeme(img, topText.value, bottomText.value, topTextSize.value, bottomTextSize.value);
+          };
+      };
+      reader.readAsDataURL(imgInput.files[0]);
+    }
+    catch(err) {
+      document.getElementById("error-msg").innerHTML = "Please upload an image.";
+    }
 
 });
 
