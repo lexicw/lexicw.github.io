@@ -11,9 +11,6 @@ let ctx = canvas.getContext('2d');
 canvas.width = canvas.height = 0;
 
 
-
-
-
 function generateMeme (img, topText, bottomText, topTextSize, bottomTextSize) {
 
     // Size canvas to image
@@ -89,13 +86,15 @@ document.getElementById("generate").addEventListener("click", function() {
       document.getElementById("error-msg").innerHTML = "";
       // Read image as DataURL using the FileReader API
       let reader = new FileReader();
-      reader.onload = function () {
-          let img = new Image;
-          img.src = reader.result;
-          img.onload = function(){
-          generateMeme(img, topText.value, bottomText.value, topTextSize.value, bottomTextSize.value);
-          };
-      };
+
+        reader.onload = function () {
+            let img = new Image;
+            img.src = reader.result;
+            img.onload = function(){
+            generateMeme(img, topText.value, bottomText.value, topTextSize.value, bottomTextSize.value);
+            };
+        };
+
       reader.readAsDataURL(imgInput.files[0]);
     }
     catch(err) {

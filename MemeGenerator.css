@@ -7,6 +7,8 @@
 }
 h1 {
   text-align: center;
+  font-family: Impact;
+  font-size: 52px;
 }
 h4 {
   text-align: center;
@@ -19,7 +21,6 @@ textarea {
     width: 60%;
     display: block;
     margin: auto;
-    font-family: 'Impact';
 }
 
 .flex-container {
