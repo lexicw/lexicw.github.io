@@ -1,0 +1,144 @@
+@import url(fonts/FastFoodIcons.css);
+
+.card-container {
+  display: flex;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+}
+
+#turns {
+  text-align: center;
+  font-weight: bold;
+}
+
+button {
+  margin: 0 auto;
+  display: block;
+  background-color: #555555;
+  color: white;
+  border: 2px solid black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+.card-1 {
+  color: pink;
+}
+
+.card-2 {
+  color: red;
+}
+
+.card-3 {
+  color: gray;
+}
+
+.card-4 {
+  color: blue;
+}
+
+.card-5 {
+  color: black;
+}
+
+.card-6 {
+  color: orange;
+}
+
+.card-7 {
+  color: brown;
+}
+
+.card-8 {
+  color: green;
+}
+
+.card {
+  background-color: #f1f1f1;
+  font-size: 70px;
+  margin: 5px;
+  padding: 35px;
+  text-align: center;
+  display: inline-block;
+  width: 5%;
+  height: 8%;
+  cursor: pointer;
+  flex: 1;
+
+  /* Set the transition effects */
+-webkit-transition: -webkit-transform 0.4s;
+-moz-transition: -moz-transform 0.4s;
+-o-transition: -o-transform 0.4s;
+transition: transform 0.4s;
+-webkit-transform-style: preserve-3d;
+-moz-transform-style: preserve-3d;
+-o-transform-style: preserve-3d;
+transform-style: preserve-3d;
+}
+
+.wrapper {
+  width: 405px;
+  height: 600px;
+  margin: 0px auto;
+}
+
+.card.flipped {
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card .front, .card .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  left: 0px;
+  top: 0px;
+  height: 100px;
+  line-height: 100px;
+  border: 1px solid black;
+  font-family: 'Fast Food Icons', Arial, Helvetica, sans-serif;
+}
+
+.card .back {
+  position: absolute;
+  z-index: 1;
+  position: absolute;
+  background-image: linear-gradient(45deg, #666666 25%, #000000 25%, #000000 50%, #666666 50%, #666666 75%, #000000 75%, #000000 100%);
+  background-size: 28.28px 28.28px;
+}
+
+.card .front {
+  background-color: #f1f1f1;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY( 180deg);
+  z-index: 1;
+  position: absolute;
+}
+
+.matched {
+  visibility:hidden;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Cedarville Cursive';
+}

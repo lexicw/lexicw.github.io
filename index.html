@@ -105,14 +105,15 @@
     <div class="col"><span class="fab fa-js" style="font-size:64px;"></span><br>Javascript</div>
     <div class="col"><span class="fab fa-java" style="font-size:64px;"></span><br>Java</div>
 	<div class="col"><span class="fab fa-bootstrap" style="font-size:64px;"></span><br>Bootstrap</div>
-	<div class="col"><span class="fas fa-database" style="font-size:64px;"></span><br>SQL</div>
+	<div class="col mb-4"><span class="fas fa-database" style="font-size:64px;"></span><br>SQL</div>
+	<div class="col"><img src="img/jquery.png"><br>JQuery</div>
   </div>
   </div>
 </div>
 
 
 </br>
-<div class="reveal">
+<div class="reveal mb-5">
   <h4 id="projects">Projects</h4>
   <p>Below are some of my projects. The source code for all of them can be viewed on my Github account.</p>
 
@@ -128,7 +129,7 @@
         <p>A small program that will generate a random number from 1-6 and display the number on a dice. The dice image is made with an HTML canvas.
         </p>
 		<p>
-		Languages: HTML, CSS, Javascript
+		Technologies: HTML, CSS, Javascript
 		</p>
            <button type="button" class="btn btn-dark card-btn stretched-link" data-toggle="modal" data-target="#diceModal">
     Open
@@ -138,16 +139,16 @@
   </div>
   <div class="col-sm-6" style="text-align:center;">
     <div class="card mb-3">
-		<img src="img/tipcalculator.jpg" class="card-img-top">
+		<img src="img/memes.jpg" class="card-img-top">
       <div class="card-body">
 
-        <h5>Tip Calculator</h5>
-        <p> A simple program that will generate what your tip and total will be for a meal. Enter your meal cost, select the percentage, and the program will calculate the tip and total.
+        <h5>Meme Generator</h5>
+        <p> A program that will generate a custom meme for you. Just upload a picture, fill in text fields, adjust text settings, and press Generate! You can also download your meme.
 		</p>
 		<p>
-		Languages: HTML, CSS, Javascript
+		Technologies: HTML, CSS, Javascript
 		</p>
-		<button type="button" class="btn btn-dark card-btn stretched-link" data-toggle="modal" data-target="#TipCalcModal">
+		<button type="button" class="btn btn-dark card-btn stretched-link" data-toggle="modal" data-target="#MemeGenModal">
 			Open
 		</button>
 
@@ -162,7 +163,7 @@
         <h5>Egyptian Quiz</h5>
         <p> Test your knowledge of Egyptian history with this Javascript quiz! There are 10 questions you will need to answer, and then your percentage will be calculated at the end.</p>
 		<p>
-		Languages: HTML, CSS, Javascript
+		Technologies: HTML, CSS, Javascript
 		</p>
 		<button type="button" class="btn btn-dark card-btn stretched-link" data-toggle="modal" data-target="#EgyptianQuizModal">
 			Open
@@ -171,7 +172,8 @@
       </div>
     </div>
     </div>
-        <div class="col-sm-6" style="text-align:center;">
+	
+    <div class="col-sm-6" style="text-align:center;">
     <div class="card mb-3">
 		<img src="img/ToDoList.jpg" class="card-img-top">
       <div class="card-body">
@@ -179,17 +181,14 @@
         <h5>To-Do List</h5>
         <p> A program where you can enter things that you need to do, and then it will be added to a list. There are also options to delete first, delete last, or clear the entire list.</p>
 		<p>
-		Languages: HTML, CSS, Javascript
+		Technologies: HTML, CSS, Javascript
 		</p>
 		<button type="button" class="btn btn-dark card-btn stretched-link" data-toggle="modal" data-target="#ToDoListModal">
 			Open
 		</button>
-
       </div>
     </div>
     </div>
-
-
 
 	<div class="col-sm-6" style="text-align:center;">
     <div class="card mb-3">
@@ -199,7 +198,7 @@
         <h5>Inventory Management System</h5>
         <p> A Java program that stores parts and products into a system. The user can add/modify/delete the parts and products, and search for them. </p>
 		<p>
-		Languages: Java
+		Technologies: Java
 		</p>
 		<button type="button" class="btn btn-dark card-btn stretched-link" data-toggle="modal" data-target="#InventoryModal">
 			Open
@@ -210,7 +209,7 @@
     </div>
 
 
-	        <div class="col-sm-6" style="text-align:center;">
+	<div class="col-sm-6" style="text-align:center;">
     <div class="card mb-3">
 		<img src="img/schedule.jpg" class="card-img-top">
       <div class="card-body">
@@ -218,7 +217,7 @@
         <h5>Scheduling Application</h5>
         <p> A program that allows a user to log in, add/modify/delete customers and appointments, and generate reports.</p>
 		<p>
-		Languages: Java and SQL
+		Technologies: Java and SQL
 		</p>
 		<button type="button" class="btn btn-dark card-btn stretched-link" data-toggle="modal" data-target="#ScheduleModal">
 			Open
@@ -227,6 +226,24 @@
       </div>
     </div>
     </div>
+	
+	    <div class="col-sm-6" style="text-align:center;">
+    <div class="card mb-3">
+		<img src="img/memory.jpg" class="card-img-top">
+      <div class="card-body">
+
+        <h5>Memory Game</h5>
+        <p> A classic memory card game.</p>
+		<p>
+		Technologies: HTML, CSS, Javascript, JQuery
+		</p>
+		<button type="button" class="btn btn-dark card-btn stretched-link" data-toggle="modal" data-target="#MemoryModal">
+			Open
+		</button>
+      </div>
+    </div>
+    </div>
+	
 	</div>
 
 </div>
@@ -247,7 +264,7 @@
 
         <!-- Modal body -->
         <div class="modal-body">
-         <iframe src="DiceRoll.html" title="description"></iframe>
+         <iframe src="projects/DiceRoll.html" title="description"></iframe>
         </div>
 
 
@@ -255,20 +272,20 @@
     </div>
   </div>
 
-    <!-- Tip Calculator Modal -->
-  <div class="modal" id="TipCalcModal">
-    <div class="modal-dialog modal-dialog-centered">
+    <!-- Meme Generator Modal -->
+  <div class="modal" id="MemeGenModal">
+    <div class="modal-dialog modal-lg">
       <div class="modal-content">
 
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Tip Calculator</h4>
+          <h4 class="modal-title">Meme Generator</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
 
         <!-- Modal body -->
         <div class="modal-body">
-         <iframe src="TipCalculator.html" title="description"></iframe>
+         <iframe src="projects/MemeGenerator.html" title="description" class="iframeheight"></iframe>
         </div>
 
 
@@ -290,7 +307,7 @@
 
         <!-- Modal body -->
         <div class="modal-body">
-         <iframe src="EgyptianQuiz.html" title="description"></iframe>
+         <iframe src="projects/EgyptianQuiz.html" title="description"></iframe>
         </div>
 
 
@@ -311,7 +328,7 @@
 
         <!-- Modal body -->
         <div class="modal-body">
-         <iframe src="ToDoList.html" title="description" class="iframeheight"></iframe>
+         <iframe src="projects/ToDoList.html" title="description" class="iframeheight"></iframe>
         </div>
 
 
@@ -355,6 +372,28 @@
         <!-- Modal body -->
         <div class="modal-body">
          <iframe src="https://player.vimeo.com/video/513673961?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Scheduling Application.mp4"></iframe>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+      <!-- Meme Generator Modal -->
+  <div class="modal" id="MemoryModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Memory Game</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+         <iframe src="projects/MemoryGame.html" title="description" class="iframeheight"></iframe>
         </div>
 
 

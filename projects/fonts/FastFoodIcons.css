@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Fast Food Icons';
+    src: url('FastFoodIcons.eot') format('eot'),
+        url('FastFoodIcons.woff2') format('woff2'),
+        url('FastFoodIcons.woff') format('woff'),
+        url('FastFoodIcons.ttf') format('truetype'),
+        url('FastFoodIcons.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
